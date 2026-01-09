@@ -1,19 +1,7 @@
 import { useState, useEffect } from "react";
+import type { UserFormProps } from "../types/user.types";
 
-interface Props {
-    onAdd: (user: { name: string; email: string; age: number }) => void;
-    onEdit?: (id: string, user: { name: string; email: string; age: number }) => void;
-    editingUser?: {
-        _id: string;
-        name: string;
-        email: string;
-        age: number;
-    } | null;
-    onCancel?: () => void;
-}
-
-
-const UserForm = ({ onAdd, onEdit, editingUser, onCancel }: Props) => {
+const UserForm = ({ onAdd, onEdit, editingUser, onCancel }: UserFormProps) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [age, setAge] = useState("");

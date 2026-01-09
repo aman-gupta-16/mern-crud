@@ -1,14 +1,15 @@
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import app from "./app";
+import User from "./models/user.model";
+import { connectDB } from "./config/db";
 
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI as string;
 
-import User from "./models/user.model";
-import { connectDB } from "./config/db";
+
 
 const startServer = async () => {
   try {

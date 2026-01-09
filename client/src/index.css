@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --primary: #3b82f6; /* Standard Blue */
+  --primary: #3b82f6; 
   --primary-dark: #2563eb;
   --bg-color: #f9fafb;
   --surface-color: #ffffff;
@@ -125,8 +125,6 @@ body {
   gap: 1rem;
 }
 
-/* Switch to simple full-width cards or keeping grid? 
-   User said "too much", simple list cards are safer. */
 .user-card {
   background: var(--surface-color);
   padding: 1rem;

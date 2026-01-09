@@ -1,12 +1,6 @@
-import type { User } from "../types/user.types";
+import type { UserListProps } from "../types/user.types";
 
-interface Props {
-  users: User[];
-  onDelete: (id: string) => void;
-  onEdit: (user: User) => void;
-}
-
-const UserList = ({ users, onDelete, onEdit }: Props) => {
+const UserList = ({ users, onDelete, onEdit }: UserListProps) => {
   return (
     <ul className="user-list">
       {users.map((u) => (
