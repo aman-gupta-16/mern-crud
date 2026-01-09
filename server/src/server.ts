@@ -10,8 +10,6 @@ const MONGO_URI = process.env.MONGO_URI as string;
 import User from "./models/user.model";
 import { connectDB } from "./config/db";
 
-
-
 const startServer = async () => {
   try {
     connectDB()

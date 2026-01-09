@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import User from "../models/user.model";
 
-//Create User
+
 export const createUser = async (req: Request, res: Response) => {
   try {
     const { name, email, age } = req.body;
@@ -32,7 +32,7 @@ export const createUser = async (req: Request, res: Response) => {
   }
 };
 
-//Get All Users
+
 export const getUsers = async (_req: Request, res: Response) => {
   try {
     const users = await User.find().sort({ createdAt: -1 });
@@ -47,7 +47,7 @@ export const getUsers = async (_req: Request, res: Response) => {
   }
 };
 
-//Get User By ID
+
 export const getUserById = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
@@ -69,7 +69,7 @@ export const getUserById = async (req: Request, res: Response) => {
   }
 };
 
-//Update User
+
 export const updateUser = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
@@ -96,7 +96,7 @@ export const updateUser = async (req: Request, res: Response) => {
   }
 };
 
-//Delete User
+
 export const deleteUser = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
